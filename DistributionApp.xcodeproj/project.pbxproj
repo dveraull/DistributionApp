@@ -16,6 +16,7 @@
 		39A053DA201FDB910042C73F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A053D8201FDB910042C73F /* LaunchScreen.storyboard */; };
 		39A053E5201FDB910042C73F /* DistributionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053E4201FDB910042C73F /* DistributionAppTests.swift */; };
 		39A053F0201FDB910042C73F /* DistributionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053EF201FDB910042C73F /* DistributionAppUITests.swift */; };
+		39A053FE2020C80F0042C73F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A053FD2020C80F0042C73F /* Search.storyboard */; };
 		5585E27F475793337C81743C /* Pods_DistributionAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E11A045AAAD1CC9E0965AE /* Pods_DistributionAppUITests.framework */; };
 		D2D6871AC7C82326C160325E /* Pods_DistributionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9ACDAE8B1321268819B697 /* Pods_DistributionApp.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		39A053EB201FDB910042C73F /* DistributionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DistributionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A053EF201FDB910042C73F /* DistributionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionAppUITests.swift; sourceTree = "<group>"; };
 		39A053F1201FDB910042C73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39A053FD2020C80F0042C73F /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		64CFC686904C0772048F7676 /* Pods-DistributionAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionAppUITests/Pods-DistributionAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E7D24A7153F8C5C07080C77 /* Pods-DistributionAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionAppTests/Pods-DistributionAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		729437DEC2AAB20579C11A93 /* Pods-DistributionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionApp/Pods-DistributionApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				39A053CC201FDB910042C73F /* AppDelegate.swift */,
 				39A053CE201FDB910042C73F /* ViewController.swift */,
 				39A053D0201FDB910042C73F /* Main.storyboard */,
+				39A053FD2020C80F0042C73F /* Search.storyboard */,
 				39A053D6201FDB910042C73F /* Assets.xcassets */,
 				39A053D8201FDB910042C73F /* LaunchScreen.storyboard */,
 				39A053DB201FDB910042C73F /* Info.plist */,
@@ -286,6 +289,7 @@
 			files = (
 				39A053DA201FDB910042C73F /* LaunchScreen.storyboard in Resources */,
 				39A053D7201FDB910042C73F /* Assets.xcassets in Resources */,
+				39A053FE2020C80F0042C73F /* Search.storyboard in Resources */,
 				39A053D2201FDB910042C73F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
