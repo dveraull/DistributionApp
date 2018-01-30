@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1EDB674924BA83DBC72D8BEF /* Pods_DistributionAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3134F3EE4447F2E6D22DDD8 /* Pods_DistributionAppTests.framework */; };
 		39A053CD201FDB910042C73F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053CC201FDB910042C73F /* AppDelegate.swift */; };
-		39A053CF201FDB910042C73F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053CE201FDB910042C73F /* ViewController.swift */; };
 		39A053D2201FDB910042C73F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A053D0201FDB910042C73F /* Main.storyboard */; };
 		39A053D5201FDB910042C73F /* DistributionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39A053D3201FDB910042C73F /* DistributionApp.xcdatamodeld */; };
 		39A053D7201FDB910042C73F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39A053D6201FDB910042C73F /* Assets.xcassets */; };
@@ -17,6 +16,10 @@
 		39A053E5201FDB910042C73F /* DistributionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053E4201FDB910042C73F /* DistributionAppTests.swift */; };
 		39A053F0201FDB910042C73F /* DistributionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053EF201FDB910042C73F /* DistributionAppUITests.swift */; };
 		39A053FE2020C80F0042C73F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A053FD2020C80F0042C73F /* Search.storyboard */; };
+		50E25CD720211E7300177E13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CD620211E7300177E13 /* LoginViewController.swift */; };
+		50E25CDA20211FBE00177E13 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CD820211FA500177E13 /* MapViewController.swift */; };
+		50E25CDC2021216600177E13 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CDB2021216600177E13 /* RegisterViewController.swift */; };
+		50E25CDE2021222400177E13 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CDD2021222400177E13 /* MoreViewController.swift */; };
 		5585E27F475793337C81743C /* Pods_DistributionAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E11A045AAAD1CC9E0965AE /* Pods_DistributionAppUITests.framework */; };
 		D2D6871AC7C82326C160325E /* Pods_DistributionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9ACDAE8B1321268819B697 /* Pods_DistributionApp.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +45,6 @@
 		25E11A045AAAD1CC9E0965AE /* Pods_DistributionAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DistributionAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A053C9201FDB910042C73F /* DistributionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistributionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A053CC201FDB910042C73F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39A053CE201FDB910042C73F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39A053D1201FDB910042C73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39A053D4201FDB910042C73F /* DistributionApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DistributionApp.xcdatamodel; sourceTree = "<group>"; };
 		39A053D6201FDB910042C73F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +57,10 @@
 		39A053EF201FDB910042C73F /* DistributionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionAppUITests.swift; sourceTree = "<group>"; };
 		39A053F1201FDB910042C73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39A053FD2020C80F0042C73F /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		50E25CD620211E7300177E13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		50E25CD820211FA500177E13 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		50E25CDB2021216600177E13 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		50E25CDD2021222400177E13 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		64CFC686904C0772048F7676 /* Pods-DistributionAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionAppUITests/Pods-DistributionAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E7D24A7153F8C5C07080C77 /* Pods-DistributionAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionAppTests/Pods-DistributionAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		729437DEC2AAB20579C11A93 /* Pods-DistributionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionApp/Pods-DistributionApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,13 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				39A053CC201FDB910042C73F /* AppDelegate.swift */,
-				39A053CE201FDB910042C73F /* ViewController.swift */,
-				39A053D0201FDB910042C73F /* Main.storyboard */,
-				39A053FD2020C80F0042C73F /* Search.storyboard */,
 				39A053D6201FDB910042C73F /* Assets.xcassets */,
-				39A053D8201FDB910042C73F /* LaunchScreen.storyboard */,
 				39A053DB201FDB910042C73F /* Info.plist */,
 				39A053D3201FDB910042C73F /* DistributionApp.xcdatamodeld */,
+				50E25CD520211D5A00177E13 /* Views */,
+				50E25CD420211D4300177E13 /* Controllers */,
 			);
 			path = DistributionApp;
 			sourceTree = "<group>";
@@ -156,6 +160,27 @@
 				25E11A045AAAD1CC9E0965AE /* Pods_DistributionAppUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50E25CD420211D4300177E13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				50E25CD620211E7300177E13 /* LoginViewController.swift */,
+				50E25CD820211FA500177E13 /* MapViewController.swift */,
+				50E25CDB2021216600177E13 /* RegisterViewController.swift */,
+				50E25CDD2021222400177E13 /* MoreViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		50E25CD520211D5A00177E13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39A053D0201FDB910042C73F /* Main.storyboard */,
+				39A053FD2020C80F0042C73F /* Search.storyboard */,
+				39A053D8201FDB910042C73F /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		914FB80A3AD855094BE4B740 /* Pods */ = {
@@ -465,9 +490,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E25CD720211E7300177E13 /* LoginViewController.swift in Sources */,
+				50E25CDC2021216600177E13 /* RegisterViewController.swift in Sources */,
 				39A053D5201FDB910042C73F /* DistributionApp.xcdatamodeld in Sources */,
-				39A053CF201FDB910042C73F /* ViewController.swift in Sources */,
+				50E25CDE2021222400177E13 /* MoreViewController.swift in Sources */,
 				39A053CD201FDB910042C73F /* AppDelegate.swift in Sources */,
+				50E25CDA20211FBE00177E13 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
