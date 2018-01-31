@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eva-SH-MlY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eva-SH-MlY">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -344,6 +343,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapaLoc" destination="dh1-vU-U5G" id="BfC-1r-6ci"/>
+                        <outlet property="txtDNI" destination="cJy-0j-Vni" id="xNf-Lk-YTm"/>
+                        <outlet property="txtDireccion" destination="2bo-Nw-QZ9" id="8uQ-as-n8O"/>
+                        <outlet property="txtName" destination="zA9-l1-uTe" id="hEG-1u-h2X"/>
+                        <outlet property="txtTelefono" destination="CyR-gy-9oZ" id="emT-aJ-wj9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chu-LM-QUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -445,6 +451,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="viewMapa" destination="ujj-ul-H9N" id="0vh-1M-5Bf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qV-g4-h60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

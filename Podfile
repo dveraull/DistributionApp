@@ -7,7 +7,8 @@ target 'DistributionApp' do
 
   # Pods for DistributionApp
   pod 'Alamofire', '~> 4.5'
-
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
   target 'DistributionAppTests' do
     inherit! :search_paths
     # Pods for testing
