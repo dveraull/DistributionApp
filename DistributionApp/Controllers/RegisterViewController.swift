@@ -46,6 +46,13 @@ class RegisterViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func registerButtonPressed(_ sender: Any) {
+        if(txtName.text == ""){
+            print("sin nombre")
+            alertValidation("El Nombre esta vacio")
+        }else{
+            print("User's name: \(txtName.text!)")
+            alertConfirm()
+        }
         if let mylocation = mapView.myLocation {
             print("User's location: \(mylocation)")
         } else {
@@ -59,6 +66,55 @@ class RegisterViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    func alertConfirm(/*_ cliente : Cliente*/){
+        let alert = UIAlertController(title: "Confirmacion de Registro",
+                                      message: "¿Confirma el registro?",
+                                      preferredStyle: .alert)
+        
+        //Creamos el UIAlertAction que nos permitirá guardar la tarea
+        let saveAction = UIAlertAction(title: "Guardar",
+                                       style: .default,
+                                       handler: { (action:UIAlertAction) -> Void in
+                                        //Guardamos el texto del textField en el array tasks y recargamos la table view
+                                        //let textField = alert.textFields!.first
+                                        //self.tareas.append(Tarea(1,textField!.text!,"Sin hacer"))
+                                        //self.tasks.append(textField!.text!)
+                                        //self.tablatareas.reloadData()
+        })
+        //Creamos el UIAlertAction que nos permitirá cancelar
+        let cancelAction = UIAlertAction(title: "Cancelar",
+                                         style: .default) { (action: UIAlertAction) -> Void in}
+        
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        present(alert,
+                animated: true,
+                completion: nil)    }
+    
+    func alertValidation(_ mensaje : String){
+        let alert = UIAlertController(title: "Alerta",
+                                      message: mensaje,
+                                      preferredStyle: .alert)
+        
+        //Creamos el UIAlertAction que nos permitirá guardar la tarea
+        let saveAction = UIAlertAction(title: "Aceptar",
+                                       style: .default,
+                                       handler: { (action:UIAlertAction) -> Void in
+                                        //Guardamos el texto del textField en el array tasks y recargamos la table view
+                                        //let textField = alert.textFields!.first
+                                        //self.tareas.append(Tarea(1,textField!.text!,"Sin hacer"))
+                                        //self.tasks.append(textField!.text!)
+                                        //self.tablatareas.reloadData()
+        })
+        
+        
+        alert.addAction(saveAction)
+        
+        present(alert,
+                animated: true,
+                completion: nil)    }
     /*
     // MARK: - Navigation
 
