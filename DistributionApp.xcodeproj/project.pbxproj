@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1EDB674924BA83DBC72D8BEF /* Pods_DistributionAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3134F3EE4447F2E6D22DDD8 /* Pods_DistributionAppTests.framework */; };
+		390B6928202213F8001D5535 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B6927202213F8001D5535 /* DetailViewController.swift */; };
+		391012522022341D0006145A /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391012512022341D0006145A /* ListTableViewController.swift */; };
+		396BAEBB2021355B008B4D88 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396BAEBA2021355B008B4D88 /* SearchViewController.swift */; };
 		39A053CD201FDB910042C73F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053CC201FDB910042C73F /* AppDelegate.swift */; };
 		39A053D2201FDB910042C73F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A053D0201FDB910042C73F /* Main.storyboard */; };
 		39A053D5201FDB910042C73F /* DistributionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39A053D3201FDB910042C73F /* DistributionApp.xcdatamodeld */; };
@@ -43,6 +46,9 @@
 
 /* Begin PBXFileReference section */
 		25E11A045AAAD1CC9E0965AE /* Pods_DistributionAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DistributionAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		390B6927202213F8001D5535 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		391012512022341D0006145A /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		396BAEBA2021355B008B4D88 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		39A053C9201FDB910042C73F /* DistributionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistributionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A053CC201FDB910042C73F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39A053D1201FDB910042C73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -169,6 +175,9 @@
 				50E25CD820211FA500177E13 /* MapViewController.swift */,
 				50E25CDB2021216600177E13 /* RegisterViewController.swift */,
 				50E25CDD2021222400177E13 /* MoreViewController.swift */,
+				396BAEBA2021355B008B4D88 /* SearchViewController.swift */,
+				390B6927202213F8001D5535 /* DetailViewController.swift */,
+				391012512022341D0006145A /* ListTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -491,11 +500,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				50E25CD720211E7300177E13 /* LoginViewController.swift in Sources */,
+				396BAEBB2021355B008B4D88 /* SearchViewController.swift in Sources */,
 				50E25CDC2021216600177E13 /* RegisterViewController.swift in Sources */,
 				39A053D5201FDB910042C73F /* DistributionApp.xcdatamodeld in Sources */,
 				50E25CDE2021222400177E13 /* MoreViewController.swift in Sources */,
 				39A053CD201FDB910042C73F /* AppDelegate.swift in Sources */,
+				391012522022341D0006145A /* ListTableViewController.swift in Sources */,
 				50E25CDA20211FBE00177E13 /* MapViewController.swift in Sources */,
+				390B6928202213F8001D5535 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
