@@ -6,16 +6,15 @@
 //  Copyright © 2018 Aceleradora Mobile Perú. All rights reserved.
 //
 
-
 import Foundation
-import Alamofire
+/*import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
-import ReachabilitySwift
+import Reachability
 
-public class RestApidata: RestApi{
+public class RestApiData: RestApi{
     
-    public static let sharedInstance = RestApi()
+    public static let sharedInstance = RestApiData()
     
     var alamofireManager : Alamofire.SessionManager?
     //var alamofireManagerAuth : Alamofire.SessionManager?
@@ -23,9 +22,9 @@ public class RestApidata: RestApi{
     let reachability = Reachability()
     //var requestAlamo:Alamofire.DataRequest?
     
-    let upsError:ErrorEntity = ErrorEntity(status: 999, title: "¡Ups!", detail: "Ocurrió un problema al conectarse con Puntos, por favor intenta nuevamente.", type:AlertType.errorAlert)
+    let upsError:ErrorEntity = ErrorEntity(status: 999, title: "¡Ups!", detail: "Ocurrió un problema al conectarse con Puntos, por favor intenta nuevamente.")
     
-    let redError:ErrorEntity = ErrorEntity(status: 999, title: "", detail: "Tu conecxión a internet esta fallando, por favor intenta de nuevo.", type:AlertType.errorRed)
+    let redError:ErrorEntity = ErrorEntity(status: 999, title: "", detail: "Tu conecxión a internet esta fallando, por favor intenta de nuevo.")
     
     
     typealias VerifyResponse = (_ succeeded: Bool)->Void
@@ -43,11 +42,9 @@ public class RestApidata: RestApi{
         //self.managmentAuth()
     }
     
-    public func login(username:String,
-                      password:String,
-                      completion:@escaping (_ user:UserEntity?, _ error:ErrorEntity?) -> Void){
+    func login(username:String, password:String, completion:@escaping (_ user:User?, _ error:ErrorEntity?) -> Void){
         
-        var user:UserEntity?
+        var user:User?
         var error:ErrorEntity?
         
         if(self.isThereNetworkConnection()){
@@ -57,7 +54,7 @@ public class RestApidata: RestApi{
                 "password" : password
             ]
             
-            let url = ApiURL.URL_LOGIN
+            let url = "http://192.168.1.79:8000/api/login/"
             
             print(url)
             
@@ -70,11 +67,11 @@ public class RestApidata: RestApi{
                         user = data?.user
                         error = data?.error
                         
-                        User.sharedInstance.saveUser(username: (user?.username)!,
-                                                     email: (user?.email)!,
-                                                     first_name: (user?.first_name)!,
-                                                     last_name: (user?.last_name)!,
-                                                     token: (user?.token)!)
+//                        User.sharedInstance.saveUser(username: (user?.username)!,
+//                                                     email: (user?.email)!,
+//                                                     first_name: (user?.first_name)!,
+//                                                     last_name: (user?.last_name)!,
+//                                                     token: (user?.token)!)
                         completion(user, error)
                     }
                     if(response.response?.statusCode == 400){
@@ -97,4 +94,4 @@ public class RestApidata: RestApi{
         return isConnected
     }
     
-}
+}*/

@@ -9,8 +9,9 @@
 
 import Foundation
 
+/*
+protocol RestApi{
+ 
+    func login(username:String, password:String, completion:@escaping (_ user:User?, _ error:ErrorEntity?) -> Void)
+}*/
 
-protocol ResApi{
-    
-    func login(username:String, password:String, completion:@escaping (_ user:UserEntity?, _ error:ErrorEntity?) -> Void)
-}

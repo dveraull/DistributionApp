@@ -7,8 +7,10 @@ target 'DistributionApp' do
 
   # Pods for DistributionApp
   pod 'Alamofire', '~> 4.5'
+pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'ReachabilitySwift', '~> 3.0'
   target 'DistributionAppTests' do
     inherit! :search_paths
     # Pods for testing

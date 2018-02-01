@@ -22,13 +22,14 @@
 		4963654520226FD000E1078D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963654420226FD000E1078D /* User.swift */; };
 		4963654820228E1100E1078D /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963654720228E1100E1078D /* RestApi.swift */; };
 		4963654A2022937B00E1078D /* RestApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496365492022937B00E1078D /* RestApiData.swift */; };
+		4963654B2022A26900E1078D /* Cliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23367C2021354F000CFFF9 /* Cliente.swift */; };
+		4963654D2022A2D900E1078D /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963654C2022A2D900E1078D /* Error.swift */; };
 		50E25CD720211E7300177E13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CD620211E7300177E13 /* LoginViewController.swift */; };
 		50E25CDA20211FBE00177E13 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CD820211FA500177E13 /* MapViewController.swift */; };
 		50E25CDC2021216600177E13 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CDB2021216600177E13 /* RegisterViewController.swift */; };
 		50E25CDE2021222400177E13 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CDD2021222400177E13 /* MoreViewController.swift */; };
 		5585E27F475793337C81743C /* Pods_DistributionAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E11A045AAAD1CC9E0965AE /* Pods_DistributionAppUITests.framework */; };
 		D2D6871AC7C82326C160325E /* Pods_DistributionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9ACDAE8B1321268819B697 /* Pods_DistributionApp.framework */; };
-		DA23367D2021354F000CFFF9 /* Cliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23367C2021354F000CFFF9 /* Cliente.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		4963654420226FD000E1078D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4963654720228E1100E1078D /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		496365492022937B00E1078D /* RestApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiData.swift; sourceTree = "<group>"; };
+		4963654C2022A2D900E1078D /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		50E25CD620211E7300177E13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		50E25CD820211FA500177E13 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		50E25CDB2021216600177E13 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -138,11 +140,12 @@
 		39A053CB201FDB910042C73F /* DistributionApp */ = {
 			isa = PBXGroup;
 			children = (
-				DA23367B2021352D000CFFF9 /* Model */,
+				4963654620228DF200E1078D /* Data */,
 				39A053CC201FDB910042C73F /* AppDelegate.swift */,
 				39A053D6201FDB910042C73F /* Assets.xcassets */,
 				39A053DB201FDB910042C73F /* Info.plist */,
 				39A053D3201FDB910042C73F /* DistributionApp.xcdatamodeld */,
+				4963654320226FA300E1078D /* Models */,
 				50E25CD520211D5A00177E13 /* Views */,
 				50E25CD420211D4300177E13 /* Controllers */,
 			);
@@ -180,7 +183,9 @@
 		4963654320226FA300E1078D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DA23367C2021354F000CFFF9 /* Cliente.swift */,
 				4963654420226FD000E1078D /* User.swift */,
+				4963654C2022A2D900E1078D /* Error.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,14 +234,6 @@
 				BD3FA5AAFDA250AD681696D7 /* Pods-DistributionAppUITests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		DA23367B2021352D000CFFF9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DA23367C2021354F000CFFF9 /* Cliente.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,12 +419,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -549,9 +548,12 @@
 				50E25CDC2021216600177E13 /* RegisterViewController.swift in Sources */,
 				39A053D5201FDB910042C73F /* DistributionApp.xcdatamodeld in Sources */,
 				50E25CDE2021222400177E13 /* MoreViewController.swift in Sources */,
+				4963654D2022A2D900E1078D /* Error.swift in Sources */,
 				39A053CD201FDB910042C73F /* AppDelegate.swift in Sources */,
 				391012522022341D0006145A /* ListTableViewController.swift in Sources */,
 				50E25CDA20211FBE00177E13 /* MapViewController.swift in Sources */,
+				4963654520226FD000E1078D /* User.swift in Sources */,
+				4963654B2022A26900E1078D /* Cliente.swift in Sources */,
 				390B6928202213F8001D5535 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

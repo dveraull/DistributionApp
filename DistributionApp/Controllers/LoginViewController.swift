@@ -40,7 +40,19 @@ class LoginViewController: UIViewController {
     
    @IBAction func loginButtonPressed(_ sender: Any) {
        // downloadDataFromAPI()
-      self.performSegue(withIdentifier: "showHome", sender: nil)
+    
+    /*RestApiData.sharedInstance.login(username: self.usuarioTextfield.text!, password: self.passwordTextfield.text!) { (user, error) in
+        
+        if(error == nil){
+            if(user != nil){
+                */self.performSegue(withIdentifier: "showHome", sender: nil)
+            /*}
+            else{
+                print("Error")
+            }
+        }
+    }*/
+    
     }
     
     
@@ -54,8 +66,7 @@ class LoginViewController: UIViewController {
         let  usuario = self.usuarioTextfield.text
         let contrasenia = self.passwordTextfield.text
         let headers = ["Content-Type": "application/json"]
-        print(usuario)
-        print(contrasenia)
+
         //1.
         Alamofire.request("http://192.168.1.79:8000/api/login/", method: .post, parameters: [ "username" : usuario!,"password": contrasenia!],encoding: JSONEncoding.default, headers: headers ).responseObject { (response: DataResponse<User>) in
             

@@ -9,6 +9,20 @@
 import Foundation
 import ObjectMapper
 
+public class UserEntityResponse: Mappable  {
+    
+    var user:User?
+    var error: ErrorEntity?
+    
+    required public init?(map: Map) {
+    }
+    public func mapping(map: Map) {
+        self.user <- map["user"]
+        self.error <- map["error"]
+    }
+}
+
+
 class User: NSObject, Mappable {
     
     var usuario: String?
