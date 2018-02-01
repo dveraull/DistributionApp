@@ -8,6 +8,8 @@
 
 import Foundation
 import ObjectMapper
+import GoogleMaps
+
 
 
 public class CustommerResponse: Mappable  {
@@ -18,6 +20,7 @@ public class CustommerResponse: Mappable  {
     required public init?(map: Map) {
     }
     
+    
     public func mapping(map: Map) {
         self.customers <- map["custommers"]
         self.error      <- map["error"]
@@ -25,7 +28,22 @@ public class CustommerResponse: Mappable  {
     }
 }
 
-public class Custommer: Mappable  {
+public class CustommerEntityResponse: Mappable  {
+    
+    var custom: Custommer?
+    var error: ErrorEntity?
+    
+    required public init?(map: Map) {
+    }
+    
+    public func mapping(map: Map) {
+        self.custom <- map["custom"]
+        self.error      <- map["error"]
+        
+    }
+}
+
+public class Custommer: NSObject,Mappable  {
     
     var id:Int?
     var name:String?
@@ -38,6 +56,11 @@ public class Custommer: Mappable  {
     required public init?(map: Map) {
     }
     
+    
+    override init() {
+        super.init()
+    }
+    
     public func mapping(map: Map) {
         self.id             <- map["id"]
         self.name           <- map["name"]
@@ -47,12 +70,24 @@ public class Custommer: Mappable  {
         self.location       <- map["location"]
         self.dni            <- map["dni"]
     }
+    
+    func markerCustomer() -> GMSMarker{
+        let marker2 = GMSMarker()
+        marker2.position = CLLocationCoordinate2D(latitude: Double(self.location!.latitude!), longitude: Double(self.location!.longitude!))
+        marker2.title = self.name
+        marker2.snippet = self.address
+        return marker2
+    }
 }
 
-public class Location: Mappable{
+public class Location: NSObject,Mappable{
     
-    var latitude:Int?
-    var longitude:Int?
+    var latitude:Double?
+    var longitude:Double?
+    
+    override init() {
+        super.init()
+    }
     
     required public init?(map: Map) {
     }
@@ -61,4 +96,7 @@ public class Location: Mappable{
         self.latitude   <- map["latitude"]
         self.longitude  <- map["longitude"]
     }
+    
+    
+    
 }
