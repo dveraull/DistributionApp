@@ -39,8 +39,8 @@ class LoginViewController: UIViewController {
     // MARK: - Actions
     
    @IBAction func loginButtonPressed(_ sender: Any) {
-        downloadDataFromAPI()
-       // self.performSegue(withIdentifier: "showHome", sender: nil)
+       // downloadDataFromAPI()
+      self.performSegue(withIdentifier: "showHome", sender: nil)
     }
     
     
