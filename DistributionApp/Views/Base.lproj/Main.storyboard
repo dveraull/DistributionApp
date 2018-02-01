@@ -385,9 +385,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Buscar el cliente" id="hLe-cF-GBd">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="UJa-Pd-7to" id="B12-Gv-ASC"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="3am-Dc-gVz" detailTextLabel="Zxj-hM-SNq" style="IBUITableViewCellStyleValue1" id="Lfp-it-Rp8">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lfp-it-Rp8" id="mnX-04-lMO">
                                     <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
@@ -418,10 +426,20 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Buscar" id="ood-1S-dPB"/>
                     <connections>
+                        <outlet property="buscarSearchBar" destination="hLe-cF-GBd" id="ZSf-9O-W3M"/>
+                        <outlet property="searchDisplayController" destination="CWd-tt-WAB" id="jYP-BZ-UMW"/>
                         <segue destination="vhf-Ek-29N" kind="show" identifier="showDetailCustommer" id="7hY-Kg-MF2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZf-lL-5ay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="CWd-tt-WAB">
+                    <connections>
+                        <outlet property="delegate" destination="UJa-Pd-7to" id="Ftq-PM-5Kl"/>
+                        <outlet property="searchContentsController" destination="UJa-Pd-7to" id="1TV-5G-cTW"/>
+                        <outlet property="searchResultsDataSource" destination="UJa-Pd-7to" id="ncA-c4-tCJ"/>
+                        <outlet property="searchResultsDelegate" destination="UJa-Pd-7to" id="gsp-nm-vgH"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2651" y="32"/>
         </scene>
@@ -586,13 +604,6 @@
                                     </label>
                                 </subviews>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distribution" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU9-fi-MBA">
-                                <rect key="frame" x="37" y="77" width="246" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bike-logo" translatesAutoresizingMaskIntoConstraints="NO" id="2WN-8E-PqF">
                                 <rect key="frame" x="74" y="150" width="173" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -608,6 +619,13 @@
                                     <action selector="exitButtonPressed:" destination="MxD-7I-D3N" eventType="touchUpInside" id="MDZ-8m-Qkv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distribution" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU9-fi-MBA">
+                                <rect key="frame" x="37" y="77" width="246" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.53372275830000004" green="0.16986188290000001" blue="0.552969873" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="56I-fN-QvK"/>
@@ -618,7 +636,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ptg-Gp-jgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3401.25" y="-1669.0140845070423"/>
+            <point key="canvasLocation" x="3403" y="-1666"/>
         </scene>
         <!--Mapa-->
         <scene sceneID="QaT-MK-lpk">

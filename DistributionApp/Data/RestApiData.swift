@@ -24,7 +24,7 @@ public class RestApiData: RestApi{
     
     let upsError:ErrorEntity = ErrorEntity(status: 999, title: "¡Ups!", detail: "Ocurrió un problema al conectarse con Puntos, por favor intenta nuevamente.")
     
-    let redError:ErrorEntity = ErrorEntity(status: 999, title: "", detail: "Tu conecxión a internet esta fallando, por favor intenta de nuevo.")
+    let redError:ErrorEntity = ErrorEntity(status: 999, title: "", detail: "Tu conexión a internet esta fallando, por favor intenta de nuevo.")
     
     
     typealias VerifyResponse = (_ succeeded: Bool)->Void
@@ -54,7 +54,7 @@ public class RestApiData: RestApi{
                 "password" : password
             ]
             
-            let url = "http://192.168.8.101:8000/api/login/"
+            let url = "http://192.168.1.79:8000/api/login/"
             
             print(url)
             
@@ -102,7 +102,7 @@ public class RestApiData: RestApi{
         if(self.isThereNetworkConnection()){
         
             
-            let url = "http://192.168.8.101:8000/api/custommer/"
+            let url = "http://192.168.1.79:8000/api/custommer/"
             
             print(url)
             

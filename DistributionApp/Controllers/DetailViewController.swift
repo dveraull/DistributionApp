@@ -38,8 +38,8 @@ class DetailViewController: UIViewController {
     // MARK: - Own Methods
     func initView(){
         self.nombreLabel.text = self.custommer?.name
-        self.dniLabel.text = "\(self.custommer?.dni)"
-        self.telefonoLabel.text = "\(self.custommer?.phone)"
+        self.dniLabel.text = " \(self.custommer?.dni ?? 0)"
+        self.telefonoLabel.text = " \(self.custommer?.phone ?? 0)"
         self.direccionLabel.text = self.custommer?.address
     }
     
