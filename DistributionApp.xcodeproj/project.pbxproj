@@ -16,6 +16,9 @@
 		39A053E5201FDB910042C73F /* DistributionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053E4201FDB910042C73F /* DistributionAppTests.swift */; };
 		39A053F0201FDB910042C73F /* DistributionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053EF201FDB910042C73F /* DistributionAppUITests.swift */; };
 		39A053FE2020C80F0042C73F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A053FD2020C80F0042C73F /* Search.storyboard */; };
+		4963654520226FD000E1078D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963654420226FD000E1078D /* User.swift */; };
+		4963654820228E1100E1078D /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963654720228E1100E1078D /* RestApi.swift */; };
+		4963654A2022937B00E1078D /* RestApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496365492022937B00E1078D /* RestApiData.swift */; };
 		50E25CD720211E7300177E13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CD620211E7300177E13 /* LoginViewController.swift */; };
 		50E25CDA20211FBE00177E13 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CD820211FA500177E13 /* MapViewController.swift */; };
 		50E25CDC2021216600177E13 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CDB2021216600177E13 /* RegisterViewController.swift */; };
@@ -57,6 +60,9 @@
 		39A053EF201FDB910042C73F /* DistributionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionAppUITests.swift; sourceTree = "<group>"; };
 		39A053F1201FDB910042C73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39A053FD2020C80F0042C73F /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		4963654420226FD000E1078D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4963654720228E1100E1078D /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
+		496365492022937B00E1078D /* RestApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiData.swift; sourceTree = "<group>"; };
 		50E25CD620211E7300177E13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		50E25CD820211FA500177E13 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		50E25CDB2021216600177E13 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +130,8 @@
 		39A053CB201FDB910042C73F /* DistributionApp */ = {
 			isa = PBXGroup;
 			children = (
+				4963654620228DF200E1078D /* Data */,
+				4963654320226FA300E1078D /* Models */,
 				39A053CC201FDB910042C73F /* AppDelegate.swift */,
 				39A053D6201FDB910042C73F /* Assets.xcassets */,
 				39A053DB201FDB910042C73F /* Info.plist */,
@@ -160,6 +168,23 @@
 				25E11A045AAAD1CC9E0965AE /* Pods_DistributionAppUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4963654320226FA300E1078D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4963654420226FD000E1078D /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4963654620228DF200E1078D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4963654720228E1100E1078D /* RestApi.swift */,
+				496365492022937B00E1078D /* RestApiData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		50E25CD420211D4300177E13 /* Controllers */ = {
@@ -377,10 +402,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DistributionApp/Pods-DistributionApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -490,12 +519,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4963654A2022937B00E1078D /* RestApiData.swift in Sources */,
+				4963654820228E1100E1078D /* RestApi.swift in Sources */,
 				50E25CD720211E7300177E13 /* LoginViewController.swift in Sources */,
 				50E25CDC2021216600177E13 /* RegisterViewController.swift in Sources */,
 				39A053D5201FDB910042C73F /* DistributionApp.xcdatamodeld in Sources */,
 				50E25CDE2021222400177E13 /* MoreViewController.swift in Sources */,
 				39A053CD201FDB910042C73F /* AppDelegate.swift in Sources */,
 				50E25CDA20211FBE00177E13 /* MapViewController.swift in Sources */,
+				4963654520226FD000E1078D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
