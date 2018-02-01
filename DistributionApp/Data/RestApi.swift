@@ -14,5 +14,6 @@ protocol RestApi{
  
     func login(username:String, password:String, completion:@escaping (_ user:User?, _ error:ErrorEntity?) -> Void)
     func getCustommers(completion:@escaping (_ custommers:[Custommer]?, _ error:ErrorEntity?) -> Void)
+    func RegisterCustomer(customer: Custommer, completion:@escaping (_ custom:Custommer?, _ error:ErrorEntity?) -> Void)
 }
 

@@ -49,14 +49,21 @@ class RegisterViewController: UIViewController {
         if(txtName.text == ""){
             print("sin nombre")
             alertValidation("El Nombre esta vacio")
-        }else{
-            print("User's name: \(txtName.text!)")
-            alertConfirm()
-        }
-        if let mylocation = mapView.myLocation {
+        }else if(txtDNI.text == ""){
+            print("sin nombre")
+            alertValidation("El DNI esta vacio")
+        }else if(txtTelefono.text == ""){
+            print("sin nombre")
+            alertValidation("El Telefono esta vacio")
+        }else if(txtDireccion.text == ""){
+            print("sin nombre")
+            alertValidation("La Direccion esta vacia")
+        }else if let mylocation = mapView.myLocation {
             print("User's location: \(mylocation)")
+            alertConfirm()
         } else {
-            print("User's location is unknown")
+            print("sin nombre")
+            alertValidation("No Hay Localizacion")
            // self.dismiss(animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
         }
         
@@ -75,11 +82,34 @@ class RegisterViewController: UIViewController {
         let saveAction = UIAlertAction(title: "Guardar",
                                        style: .default,
                                        handler: { (action:UIAlertAction) -> Void in
-                                        //Guardamos el texto del textField en el array tasks y recargamos la table view
-                                        //let textField = alert.textFields!.first
-                                        //self.tareas.append(Tarea(1,textField!.text!,"Sin hacer"))
-                                        //self.tasks.append(textField!.text!)
-                                        //self.tablatareas.reloadData()
+                                        let mylocation = self.mapView.myLocation
+                                        let customer = Custommer()
+                                        customer.name=self.txtName.text
+                                        customer.dni=Int(self.txtDNI.text!)
+                                        customer.phone=Int(self.txtTelefono.text!)
+                                        customer.address=self.txtDireccion.text
+                                        let locacion = Location()
+                                        locacion.latitude = mylocation!.coordinate.latitude
+                                        locacion.longitude = mylocation!.coordinate.longitude
+                                        customer.location=locacion
+                                        //print(customer.address)
+                                        RestApiData.sharedInstance.RegisterCustomer(customer: customer) { (customer, error) in
+                                            //SVProgressHUD.dismiss()
+                                            if(error == nil){
+                                                //if(customer != nil){
+                                                    print("se registro correctamente")
+                                                    self.txtName.text=""
+                                                    self.txtDNI.text=""
+                                                    self.txtTelefono.text=""
+                                                    self.txtDireccion.text=""
+                                                    
+                                                    self.dismiss(animated: true, completion: nil)
+                                                /*}
+                                                else{
+                                                    print("Error")
+                                                }*/
+                                            }
+                                        }
         })
         //Creamos el UIAlertAction que nos permitirá cancelar
         let cancelAction = UIAlertAction(title: "Cancelar",
@@ -102,11 +132,8 @@ class RegisterViewController: UIViewController {
         let saveAction = UIAlertAction(title: "Aceptar",
                                        style: .default,
                                        handler: { (action:UIAlertAction) -> Void in
-                                        //Guardamos el texto del textField en el array tasks y recargamos la table view
-                                        //let textField = alert.textFields!.first
-                                        //self.tareas.append(Tarea(1,textField!.text!,"Sin hacer"))
-                                        //self.tasks.append(textField!.text!)
-                                        //self.tablatareas.reloadData()
+                                        
+
         })
         
         
@@ -115,6 +142,7 @@ class RegisterViewController: UIViewController {
         present(alert,
                 animated: true,
                 completion: nil)    }
+    
     /*
     // MARK: - Navigation
 

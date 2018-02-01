@@ -54,7 +54,7 @@ public class RestApiData: RestApi{
                 "password" : password
             ]
             
-            let url = "http://192.168.8.101:8000/api/login/"
+            let url = "http://192.168.1.79:8000/api/login/"
             
             print(url)
             
@@ -63,6 +63,7 @@ public class RestApiData: RestApi{
                 switch response.result {
                 case .success:
                     let data = response.result.value
+                    print(data)
                     if(response.response?.statusCode == 200){
                         user = data?.user
                         error = data?.error
@@ -102,7 +103,7 @@ public class RestApiData: RestApi{
         if(self.isThereNetworkConnection()){
         
             
-            let url = "http://192.168.8.101:8000/api/custommer/"
+            let url = "http://192.168.1.79:8000/api/custommer/"
             
             print(url)
             
@@ -142,6 +143,68 @@ public class RestApiData: RestApi{
         var isConnected:Bool
         isConnected = (self.reachability?.isReachable)!
         return isConnected
+    }
+    
+    func RegisterCustomer(customer: Custommer, completion:@escaping (_ custom:Custommer?, _ error:ErrorEntity?) -> Void){
+        
+        var custom : Custommer?
+        var error:ErrorEntity?
+        
+        if(self.isThereNetworkConnection()){
+            
+            let parameters : [ String : Any] = [
+                "name": customer.name ?? String.self,
+                "address": customer.address ?? String.self,
+                "phone": customer.phone ?? Int.self,
+                "email": "diego@gmail.com",
+                "location": [
+                    "latitude": customer.location!.latitude!,
+                    "longitude": customer.location!.longitude!
+                ],
+                "dni": customer.dni ?? Int.self
+            ]
+            print(parameters)
+            let url = "http://192.168.1.79:8000/api/custommer/"
+            
+            print(url)
+            
+            self.alamofireManager?.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers:headers).responseObject { (response: DataResponse<CustommerEntityResponse>) in
+                print(response.result)
+                switch response.result {
+                case .success:
+                    let data = response.result.value
+                    //print(data)
+                    //print(response.response?.statusCode)
+                    if(response.response?.statusCode == 201){
+                        //print("if1")
+                        custom = data?.custom
+                        error = data?.error
+                        print(data?.custom)
+                        
+                        
+                        //                        User.sharedInstance.saveUser(username: (user?.username)!,
+                        //                                                     email: (user?.email)!,
+                        //                                                     first_name: (user?.first_name)!,
+                        //                                                     last_name: (user?.last_name)!,
+                        //                                                     token: (user?.token)!)
+                        
+                        
+                        
+                        completion(custom, error)
+                    }
+                    if(response.response?.statusCode == 400){
+                        print("if2")
+                        error = data?.error
+                        completion(custom, error)
+                    }
+                case .failure(let err):
+                    completion(custom, self.upsError)
+                }
+            }
+            
+        }else{
+            completion(custom, self.redError)
+        }
     }
     
 }
