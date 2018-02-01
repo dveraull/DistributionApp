@@ -9,6 +9,8 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    var custommer:Custommer?
 
     @IBOutlet weak var nombreLabel: UILabel!
     @IBOutlet weak var dniLabel: UILabel!
@@ -19,13 +21,11 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.initView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
      // MARK: - Actions
@@ -36,8 +36,12 @@ class DetailViewController: UIViewController {
     
     
     // MARK: - Own Methods
-    
-    
+    func initView(){
+        self.nombreLabel.text = self.custommer?.name
+        self.dniLabel.text = "\(self.custommer?.dni)"
+        self.telefonoLabel.text = "\(self.custommer?.phone)"
+        self.direccionLabel.text = self.custommer?.address
+    }
     
     
     /*

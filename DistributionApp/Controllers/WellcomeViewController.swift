@@ -1,37 +1,32 @@
 //
-//  MapViewController.swift
+//  WellcomeViewController.swift
 //  DistributionApp
 //
-//  Created by Jordan Capa on 30/01/18.
+//  Created by Jordan Capa on 1/02/18.
 //  Copyright © 2018 Aceleradora Mobile Perú. All rights reserved.
 //
 
 import UIKit
-import GoogleMaps
-import Alamofire
 
-class MapViewController: UIViewController {
+class WellcomeViewController: UIViewController {
 
+    @IBOutlet weak var usernameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-        let userDefaults = UserDefaults.standard
-        
-        if !userDefaults.bool(forKey: "tutorial") {
-            userDefaults.set(true, forKey: "tutorial")
-            userDefaults.synchronize()
-            performSegue(withIdentifier: "showWellcomeView", sender: nil)
+        if(UniversalUser.sharedInstance.nombres != nil){
+            self.usernameLabel.text = UniversalUser.sharedInstance.nombres
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func exitButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 

@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
    
@@ -17,13 +18,14 @@ class LoginViewController: UIViewController {
   
     @IBOutlet weak var usuarioTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     var alamofireManager : Alamofire.SessionManager?
     var jsonArray: NSArray?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initVie()
+        self.initView()
         
         usuarioTextfield.attributedPlaceholder = NSAttributedString(string:"Username", attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
         passwordTextfield.attributedPlaceholder = NSAttributedString(string:"Password", attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
@@ -41,25 +43,27 @@ class LoginViewController: UIViewController {
    @IBAction func loginButtonPressed(_ sender: Any) {
        // downloadDataFromAPI()
     
-    /*RestApiData.sharedInstance.login(username: self.usuarioTextfield.text!, password: self.passwordTextfield.text!) { (user, error) in
-        
+    SVProgressHUD.show()
+    RestApiData.sharedInstance.login(username: self.usuarioTextfield.text!, password: self.passwordTextfield.text!) { (user, error) in
+        SVProgressHUD.dismiss()
         if(error == nil){
             if(user != nil){
-                */self.performSegue(withIdentifier: "showHome", sender: nil)
-            /*}
+                self.performSegue(withIdentifier: "showHome", sender: nil)
+            }
             else{
                 print("Error")
             }
         }
-    }*/
+    }
     
     }
     
     
     // MARK: - Own Methods
     
-    func initVie(){
+    func initView(){
         self.navigationController?.navigationBar.isHidden = true
+        self.loginButton.layer.cornerRadius = 5.0
     }
     
     func downloadDataFromAPI(){

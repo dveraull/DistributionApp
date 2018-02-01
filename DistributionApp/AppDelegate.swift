@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import GoogleMaps
+import IQKeyboardManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyAh4Q88NKYDHbm-vFyeheu3Usc86YdqX90")
+        
+        IQKeyboardManager.shared().isEnabled = true
+        IQKeyboardManager.shared().toolbarTintColor = UIColor(hex: "3478F6")
+        
+        UINavigationBar.appearance().tintColor = UIColor.white //your desired color here
+
+
+        
         return true
     }
 

@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "map.png",
+      "filename" : "icons8-mapa-waypoint-101.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "icons8-mapa-waypoint-100.png",
       "scale" : "2x"
     },
     {

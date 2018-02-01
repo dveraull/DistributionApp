@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		1EDB674924BA83DBC72D8BEF /* Pods_DistributionAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3134F3EE4447F2E6D22DDD8 /* Pods_DistributionAppTests.framework */; };
 		390B6928202213F8001D5535 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B6927202213F8001D5535 /* DetailViewController.swift */; };
-		391012522022341D0006145A /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391012512022341D0006145A /* ListTableViewController.swift */; };
-		396BAEBB2021355B008B4D88 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396BAEBA2021355B008B4D88 /* SearchViewController.swift */; };
 		39A053CD201FDB910042C73F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053CC201FDB910042C73F /* AppDelegate.swift */; };
 		39A053D2201FDB910042C73F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A053D0201FDB910042C73F /* Main.storyboard */; };
 		39A053D5201FDB910042C73F /* DistributionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39A053D3201FDB910042C73F /* DistributionApp.xcdatamodeld */; };
@@ -18,7 +16,6 @@
 		39A053DA201FDB910042C73F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A053D8201FDB910042C73F /* LaunchScreen.storyboard */; };
 		39A053E5201FDB910042C73F /* DistributionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053E4201FDB910042C73F /* DistributionAppTests.swift */; };
 		39A053F0201FDB910042C73F /* DistributionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053EF201FDB910042C73F /* DistributionAppUITests.swift */; };
-		39A053FE2020C80F0042C73F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A053FD2020C80F0042C73F /* Search.storyboard */; };
 		4963654520226FD000E1078D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963654420226FD000E1078D /* User.swift */; };
 		4963654820228E1100E1078D /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963654720228E1100E1078D /* RestApi.swift */; };
 		4963654A2022937B00E1078D /* RestApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496365492022937B00E1078D /* RestApiData.swift */; };
@@ -28,6 +25,11 @@
 		50E25CDA20211FBE00177E13 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CD820211FA500177E13 /* MapViewController.swift */; };
 		50E25CDC2021216600177E13 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CDB2021216600177E13 /* RegisterViewController.swift */; };
 		50E25CDE2021222400177E13 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CDD2021222400177E13 /* MoreViewController.swift */; };
+		50E25D402022D00800177E13 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25D3F2022D00700177E13 /* Utils.swift */; };
+		50E25D432022D03700177E13 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25D422022D03700177E13 /* Extensions.swift */; };
+		50E25D452022D70000177E13 /* Custommer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25D442022D70000177E13 /* Custommer.swift */; };
+		50E25D492022DC9D00177E13 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25D482022DC9D00177E13 /* SearchTableViewController.swift */; };
+		50E25D4B2022E85100177E13 /* WellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25D4A2022E85100177E13 /* WellcomeViewController.swift */; };
 		5585E27F475793337C81743C /* Pods_DistributionAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E11A045AAAD1CC9E0965AE /* Pods_DistributionAppUITests.framework */; };
 		D2D6871AC7C82326C160325E /* Pods_DistributionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9ACDAE8B1321268819B697 /* Pods_DistributionApp.framework */; };
 /* End PBXBuildFile section */
@@ -52,8 +54,6 @@
 /* Begin PBXFileReference section */
 		25E11A045AAAD1CC9E0965AE /* Pods_DistributionAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DistributionAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		390B6927202213F8001D5535 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		391012512022341D0006145A /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
-		396BAEBA2021355B008B4D88 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		39A053C9201FDB910042C73F /* DistributionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistributionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A053CC201FDB910042C73F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39A053D1201FDB910042C73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,7 +67,6 @@
 		39A053EB201FDB910042C73F /* DistributionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DistributionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A053EF201FDB910042C73F /* DistributionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionAppUITests.swift; sourceTree = "<group>"; };
 		39A053F1201FDB910042C73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39A053FD2020C80F0042C73F /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4963654420226FD000E1078D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4963654720228E1100E1078D /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		496365492022937B00E1078D /* RestApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiData.swift; sourceTree = "<group>"; };
@@ -76,6 +75,11 @@
 		50E25CD820211FA500177E13 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		50E25CDB2021216600177E13 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		50E25CDD2021222400177E13 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		50E25D3F2022D00700177E13 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		50E25D422022D03700177E13 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		50E25D442022D70000177E13 /* Custommer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custommer.swift; sourceTree = "<group>"; };
+		50E25D482022DC9D00177E13 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		50E25D4A2022E85100177E13 /* WellcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeViewController.swift; sourceTree = "<group>"; };
 		64CFC686904C0772048F7676 /* Pods-DistributionAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionAppUITests/Pods-DistributionAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E7D24A7153F8C5C07080C77 /* Pods-DistributionAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionAppTests/Pods-DistributionAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		729437DEC2AAB20579C11A93 /* Pods-DistributionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionApp/Pods-DistributionApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 		39A053CB201FDB910042C73F /* DistributionApp */ = {
 			isa = PBXGroup;
 			children = (
+				50E25D412022D00C00177E13 /* Helpers */,
 				4963654620228DF200E1078D /* Data */,
 				39A053CC201FDB910042C73F /* AppDelegate.swift */,
 				39A053D6201FDB910042C73F /* Assets.xcassets */,
@@ -186,6 +191,7 @@
 				DA23367C2021354F000CFFF9 /* Cliente.swift */,
 				4963654420226FD000E1078D /* User.swift */,
 				4963654C2022A2D900E1078D /* Error.swift */,
+				50E25D442022D70000177E13 /* Custommer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,9 +212,9 @@
 				50E25CD820211FA500177E13 /* MapViewController.swift */,
 				50E25CDB2021216600177E13 /* RegisterViewController.swift */,
 				50E25CDD2021222400177E13 /* MoreViewController.swift */,
-				396BAEBA2021355B008B4D88 /* SearchViewController.swift */,
 				390B6927202213F8001D5535 /* DetailViewController.swift */,
-				391012512022341D0006145A /* ListTableViewController.swift */,
+				50E25D482022DC9D00177E13 /* SearchTableViewController.swift */,
+				50E25D4A2022E85100177E13 /* WellcomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -217,10 +223,18 @@
 			isa = PBXGroup;
 			children = (
 				39A053D0201FDB910042C73F /* Main.storyboard */,
-				39A053FD2020C80F0042C73F /* Search.storyboard */,
 				39A053D8201FDB910042C73F /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		50E25D412022D00C00177E13 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				50E25D3F2022D00700177E13 /* Utils.swift */,
+				50E25D422022D03700177E13 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		914FB80A3AD855094BE4B740 /* Pods */ = {
@@ -354,7 +368,6 @@
 			files = (
 				39A053DA201FDB910042C73F /* LaunchScreen.storyboard in Resources */,
 				39A053D7201FDB910042C73F /* Assets.xcassets in Resources */,
-				39A053FE2020C80F0042C73F /* Search.storyboard in Resources */,
 				39A053D2201FDB910042C73F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,15 +431,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DistributionApp/Pods-DistributionApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -478,8 +495,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -544,15 +560,18 @@
 				4963654A2022937B00E1078D /* RestApiData.swift in Sources */,
 				4963654820228E1100E1078D /* RestApi.swift in Sources */,
 				50E25CD720211E7300177E13 /* LoginViewController.swift in Sources */,
-				396BAEBB2021355B008B4D88 /* SearchViewController.swift in Sources */,
+				50E25D452022D70000177E13 /* Custommer.swift in Sources */,
 				50E25CDC2021216600177E13 /* RegisterViewController.swift in Sources */,
+				50E25D402022D00800177E13 /* Utils.swift in Sources */,
 				39A053D5201FDB910042C73F /* DistributionApp.xcdatamodeld in Sources */,
 				50E25CDE2021222400177E13 /* MoreViewController.swift in Sources */,
 				4963654D2022A2D900E1078D /* Error.swift in Sources */,
 				39A053CD201FDB910042C73F /* AppDelegate.swift in Sources */,
-				391012522022341D0006145A /* ListTableViewController.swift in Sources */,
+				50E25D432022D03700177E13 /* Extensions.swift in Sources */,
 				50E25CDA20211FBE00177E13 /* MapViewController.swift in Sources */,
 				4963654520226FD000E1078D /* User.swift in Sources */,
+				50E25D4B2022E85100177E13 /* WellcomeViewController.swift in Sources */,
+				50E25D492022DC9D00177E13 /* SearchTableViewController.swift in Sources */,
 				4963654B2022A26900E1078D /* Cliente.swift in Sources */,
 				390B6928202213F8001D5535 /* DetailViewController.swift in Sources */,
 			);
@@ -728,7 +747,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.everis.DistributionApp.DistributionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -744,7 +763,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.everis.DistributionApp.DistributionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

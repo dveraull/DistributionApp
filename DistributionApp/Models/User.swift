@@ -9,6 +9,24 @@
 import Foundation
 import ObjectMapper
 
+
+class UniversalUser{
+    
+    private static let _sharedInstance = UniversalUser()
+    
+    static var sharedInstance: UniversalUser{
+        return _sharedInstance
+    }
+    
+    var usuario: String?
+    var correo: String?
+    var nombres: String?
+    var apellidos: String?
+    var clientes:[Custommer]?
+    var token: String?
+    
+}
+
 public class UserEntityResponse: Mappable  {
     
     var user:User?

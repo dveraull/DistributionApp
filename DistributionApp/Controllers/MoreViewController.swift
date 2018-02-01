@@ -22,7 +22,8 @@ class MoreViewController: UIViewController {
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        self.tabBarController?.navigationController?.popToRootViewController(animated: true)
+        //self.navigationController?.popToRootViewController(animated: true)
     }
     
     

@@ -7,10 +7,10 @@
 //
 
 import Foundation
-/*import Alamofire
+import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
-import Reachability
+import ReachabilitySwift
 
 public class RestApiData: RestApi{
     
@@ -54,7 +54,7 @@ public class RestApiData: RestApi{
                 "password" : password
             ]
             
-            let url = "http://192.168.1.79:8000/api/login/"
+            let url = "http://192.168.8.101:8000/api/login/"
             
             print(url)
             
@@ -72,6 +72,13 @@ public class RestApiData: RestApi{
 //                                                     first_name: (user?.first_name)!,
 //                                                     last_name: (user?.last_name)!,
 //                                                     token: (user?.token)!)
+                        
+                        UniversalUser.sharedInstance.usuario = user?.usuario
+                        UniversalUser.sharedInstance.nombres = user?.nombres
+                        UniversalUser.sharedInstance.correo = user?.correo
+                        UniversalUser.sharedInstance.apellidos = user?.apellidos
+                        UniversalUser.sharedInstance.token = user?.token
+                        
                         completion(user, error)
                     }
                     if(response.response?.statusCode == 400){
@@ -88,10 +95,53 @@ public class RestApiData: RestApi{
         }
     }
     
+    func getCustommers(completion:@escaping (_ custommers:[Custommer]?, _ error:ErrorEntity?) -> Void){
+        var custommers:[Custommer]?
+        var error:ErrorEntity?
+        
+        if(self.isThereNetworkConnection()){
+        
+            
+            let url = "http://192.168.8.101:8000/api/custommer/"
+            
+            print(url)
+            
+            self.alamofireManager?.request(url, method: .get, encoding: JSONEncoding.default, headers:headers).responseObject { (response: DataResponse<CustommerResponse>) in
+                
+                switch response.result {
+                case .success:
+                    let data = response.result.value
+                    if(response.response?.statusCode == 200){
+                        custommers = data?.customers
+                        error = data?.error
+                        
+                        //                        User.sharedInstance.saveUser(username: (user?.username)!,
+                        //                                                     email: (user?.email)!,
+                        //                                                     first_name: (user?.first_name)!,
+                        //                                                     last_name: (user?.last_name)!,
+                        //                                                     token: (user?.token)!)
+                        
+                        UniversalUser.sharedInstance.clientes = data?.customers
+                        completion(custommers, error)
+                    }
+                    if(response.response?.statusCode == 400){
+                        error = data?.error
+                        completion(custommers, error)
+                    }
+                case .failure(let err):
+                    completion(custommers, self.upsError)
+                }
+            }
+            
+        }else{
+            completion(custommers, self.redError)
+        }
+    }
+    
     public func isThereNetworkConnection()->Bool{
         var isConnected:Bool
         isConnected = (self.reachability?.isReachable)!
         return isConnected
     }
     
-}*/
+}
