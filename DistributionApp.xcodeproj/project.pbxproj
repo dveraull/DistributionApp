@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1EDB674924BA83DBC72D8BEF /* Pods_DistributionAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3134F3EE4447F2E6D22DDD8 /* Pods_DistributionAppTests.framework */; };
 		390B6928202213F8001D5535 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390B6927202213F8001D5535 /* DetailViewController.swift */; };
+		391F18B32023C74000A80A2A /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F18B22023C74000A80A2A /* PerfilViewController.swift */; };
 		39A053CD201FDB910042C73F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A053CC201FDB910042C73F /* AppDelegate.swift */; };
 		39A053D2201FDB910042C73F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A053D0201FDB910042C73F /* Main.storyboard */; };
 		39A053D5201FDB910042C73F /* DistributionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39A053D3201FDB910042C73F /* DistributionApp.xcdatamodeld */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		25E11A045AAAD1CC9E0965AE /* Pods_DistributionAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DistributionAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		390B6927202213F8001D5535 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		391F18B22023C74000A80A2A /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		39A053C9201FDB910042C73F /* DistributionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistributionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A053CC201FDB910042C73F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39A053D1201FDB910042C73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				390B6927202213F8001D5535 /* DetailViewController.swift */,
 				50E25D482022DC9D00177E13 /* SearchTableViewController.swift */,
 				50E25D4A2022E85100177E13 /* WellcomeViewController.swift */,
+				391F18B22023C74000A80A2A /* PerfilViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 				39A053CD201FDB910042C73F /* AppDelegate.swift in Sources */,
 				50E25D432022D03700177E13 /* Extensions.swift in Sources */,
 				50E25CDA20211FBE00177E13 /* MapViewController.swift in Sources */,
+				391F18B32023C74000A80A2A /* PerfilViewController.swift in Sources */,
 				4963654520226FD000E1078D /* User.swift in Sources */,
 				50E25D4B2022E85100177E13 /* WellcomeViewController.swift in Sources */,
 				50E25D492022DC9D00177E13 /* SearchTableViewController.swift in Sources */,

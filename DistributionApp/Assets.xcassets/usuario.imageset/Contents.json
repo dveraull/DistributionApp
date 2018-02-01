@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "dni-100.png",
+      "filename" : "usuario.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "usuario-240.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "usuario-480.png",
       "scale" : "3x"
     }
   ],
