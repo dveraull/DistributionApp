@@ -25,6 +25,7 @@
 		50E25CDE2021222400177E13 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E25CDD2021222400177E13 /* MoreViewController.swift */; };
 		5585E27F475793337C81743C /* Pods_DistributionAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E11A045AAAD1CC9E0965AE /* Pods_DistributionAppUITests.framework */; };
 		D2D6871AC7C82326C160325E /* Pods_DistributionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9ACDAE8B1321268819B697 /* Pods_DistributionApp.framework */; };
+		DA23367D2021354F000CFFF9 /* Cliente.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23367C2021354F000CFFF9 /* Cliente.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		BD3FA5AAFDA250AD681696D7 /* Pods-DistributionAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionAppUITests/Pods-DistributionAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4E880106B8D8BCF9A427DAB /* Pods-DistributionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionApp/Pods-DistributionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD9ACDAE8B1321268819B697 /* Pods_DistributionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DistributionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA23367C2021354F000CFFF9 /* Cliente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cliente.swift; sourceTree = "<group>"; };
 		E0CF2BF6DCDDEF1D75B5B39F /* Pods-DistributionAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DistributionAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DistributionAppTests/Pods-DistributionAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 		39A053CB201FDB910042C73F /* DistributionApp */ = {
 			isa = PBXGroup;
 			children = (
+				DA23367B2021352D000CFFF9 /* Model */,
 				39A053CC201FDB910042C73F /* AppDelegate.swift */,
 				39A053D6201FDB910042C73F /* Assets.xcassets */,
 				39A053DB201FDB910042C73F /* Info.plist */,
@@ -203,6 +206,14 @@
 				BD3FA5AAFDA250AD681696D7 /* Pods-DistributionAppUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA23367B2021352D000CFFF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA23367C2021354F000CFFF9 /* Cliente.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,9 +446,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DistributionApp/Pods-DistributionApp-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -610,7 +626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -661,7 +677,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
