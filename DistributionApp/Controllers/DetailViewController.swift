@@ -40,6 +40,8 @@ class DetailViewController: UIViewController {
         self.nombreLabel.text = self.custommer?.name
         self.dniLabel.text = "\(self.custommer?.dni ?? 0)"
         self.telefonoLabel.text = "\(self.custommer?.phone ?? 0)"
+        self.dniLabel.text = " \(self.custommer?.dni ?? 0)"
+        self.telefonoLabel.text = " \(self.custommer?.phone ?? 0)"
         self.direccionLabel.text = self.custommer?.address
     }
     
