@@ -17,6 +17,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate{
     var filteredCustommers: [Custommer] = []
     var searchActive: Bool = false
     
+    var tap: UITapGestureRecognizer?
+    
     @IBOutlet weak var buscarSearchBar: UISearchBar!
     
     override func viewDidLoad() {
@@ -24,6 +26,15 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate{
         
         self.initView()
         self.buscarSearchBar.delegate = self
+        
+        tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        
+        self.navigationController?.navigationBar.addGestureRecognizer(tap!)
+        
+    }
+    
+    @objc func dismissKeyboard(){
+        self.view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,6 +48,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate{
         filteredCustommers = searchText.isEmpty ? custommers : custommers.filter({(custommer:Custommer) -> Bool in
             return ((custommer.name?.range(of: searchText, options: .caseInsensitive)) != nil)
         })
+        
+        
         
         self.tableView.reloadData()
     }
@@ -82,6 +95,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate{
             }
             
         }
+        
+        
+        
     }
     
     

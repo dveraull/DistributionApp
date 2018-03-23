@@ -30,6 +30,8 @@ class LoginViewController: UIViewController {
         usuarioTextfield.attributedPlaceholder = NSAttributedString(string:"Username", attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
         passwordTextfield.attributedPlaceholder = NSAttributedString(string:"Password", attributes:[NSAttributedStringKey.foregroundColor: UIColor.white])
         
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
       // Metodo para navegar hacia la siguiente ventana
         
     }
@@ -56,6 +58,8 @@ class LoginViewController: UIViewController {
         }
     }
     
+    
+    
     }
     
     
@@ -66,7 +70,7 @@ class LoginViewController: UIViewController {
         self.loginButton.layer.cornerRadius = 5.0
     }
     
-    func downloadDataFromAPI(){
+    /*func downloadDataFromAPI(){
         let  usuario = self.usuarioTextfield.text
         let contrasenia = self.passwordTextfield.text
         let headers = ["Content-Type": "application/json"]
@@ -98,7 +102,7 @@ class LoginViewController: UIViewController {
                 }
     
                 }
-    }
+    }*/
     
     /*
     // MARK: - Navigation
